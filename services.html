@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Shoe Brands of the Year</title>
+    <style>
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+            color: white;
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            padding: 0 20px;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        
+        .homepage-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #91c33a;
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .homepage-button:hover {
+            background-color: #7a9f2e;
+        }
+
+       
+        h1 {
+            text-align: center;
+            margin: 60px 0 20px; 
+        }
+
+        
+        .brands {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: 20px auto;
+            max-width: 1200px;
+            padding-top: 120px; 
+        }
+
+        .brand {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .brand-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .brand-header img {
+            max-width: 100px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .brand-header h2 {
+            margin: 0;
+        }
+
+        .shoes {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .shoe {
+            background-color: #1a1a1a;
+            padding: 10px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .shoe img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .shoe h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+        }
+
+        .shoe p {
+            margin: 0;
+            font-size: 14px;
+            color: #bbb;
+        }
+
+        .shoe a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #91c33a;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .shoe a:hover {
+            background-color: #7a9f2e;
+        }
+
+        
+        .buy-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #ff5733;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .buy-button:hover {
+            background-color: #e14f28;
+        }
+
+        
+        .learn-more-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        
+        .learn-more-container input[type="checkbox"] {
+            display: none;
+        }
+
+        
+        .learn-more-container input[type="checkbox"]:checked + .description {
+            display: block;
+        }
+
+        .description {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    
+    <a href="index.html" class="homepage-button">Homepage</a>
+
+    <h1>Most Popular Shoe Brand Of The Year</h1>
+    <div class="brands">
+
+        
+        <div class="brand">
+            <div class="brand-header">
+                <img src="ADD.png" alt="Adidas Logo">
+                <h2>Adidas - Athletic Shoes</h2>
+            </div>
+            <div class="shoes">
+                <div class="shoe">
+                    <img src="1.png" alt="Adidas Ultraboost 22">
+                    <h3>Ultraboost 22</h3>
+                    <p>Ultimate cushioning for every run.</p>
+                    <div class="learn-more-container">
+                        <label for="learn-more-1" class="shoe a">Learn More</label>
+                        <input type="checkbox" id="learn-more-1">
+                        <span class="description">The Ultraboost 22 features a responsive boost midsole for high energy return and ultimate comfort.</span>
+                    </div>
+                    <a href="https://stockx.com/search?s=ultraboost+22" class="buy-button">Buy</a>
+                </div>
+                <div class="shoe">
+                    <img src="2.png" alt="Adidas NMD">
+                    <h3>NMD R1</h3>
+                    <p>Stylish and functional sneakers for the city.</p>
+                    <div class="learn-more-container">
+                        <label for="learn-more-2" class="shoe a">Learn More</label>
+                        <input type="checkbox" id="learn-more-2">
+                        <span class="description">The NMD R1 blends modern style with incredible comfort and flexibility.</span>
+                    </div>
+                    <a href="https://stockx.com/search?s=nmd+r1" class="buy-button">Buy</a>
+                </div>
+                <div class="shoe">
+                    <img src="3.png" alt="Adidas Superstar">
+                    <h3>Superstar</h3>
+                    <p>Iconic sneakers with a timeless look.</p>
+                    <div class="learn-more-container">
+                        <label for="learn-more-3" class="shoe a">Learn More</label>
+                        <input type="checkbox" id="learn-more-3">
+                        <span class="description">The Adidas Superstar is a global icon with a clean, classic design.</span>
+                    </div>
+                    <a href="https://stockx.com/search?s=superstar" class="buy-button">Buy</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="brand">
+            <div class="brand-header">
+                <img src="Converse.png" alt="Converse Logo">
+                <h2>Converse - Casual/Streetwear</h2>
+            </div>
+            <div class="shoes">
+                <div class="shoe">
+                    <img src="1c.png" alt="Converse Chuck Taylor">
+                    <h3>Chuck Taylor All Star</h3>
+                    <p>Classic canvas sneakers for everyday style.</p>
+                    <div class="learn-more-container">
+                        <label for="learn-more-4" class="shoe a">Learn More</label>
+                        <input type="checkbox" id="learn-more-4">
+                        <span class="description">The Chuck Taylor is a classic sneaker that has been an icon for generations.</span>
+                    </div>
+                    <a href="https://stockx.com/search?s=Chuck+Taylor+All+Star" class="buy-button">Buy</a>
+                </div>
+                <div class="shoe">
+                    <img src="2c.png" alt="Converse All Star">
+                    <h3>Converse All Star High Top</h3>
+                    <p>Timeless high-top silhouette with a retro feel.</p>
+                    <div class="learn-more-container">
+                        <label for="learn-more-5" class="shoe a">Learn More</label>
+                        <input type="checkbox" id="learn-more-5">
+                        <span class="description">The Converse All Star is a timeless design for those who want to stand out.</span>
+                    </div>
+                    <a href="https://stockx.com/search?s=converse+all+star" class="buy-button">Buy</a>
+                </div>
+                <div class="shoe">
+                    <img src="3c.png" alt="Converse Platform">
+                    <h3>Converse Platform</h3>
+                    <p>Elevated style with a modern platform design.</p>
+                    <div class="learn-more-container">
+                        <label for="learn-more-6" class="shoe a">Learn More</label>
+                        <input type="checkbox" id="learn-more-6">
+                        <span class="description">The Converse Platform takes a classic style and adds a bold new twist.</span>
+                    </div>
+                    <a href="https://stockx.com/search?s=Converse+Platform" class="buy-button">Buy</a>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="brand">
+            <div class="brand-header">
+                <img src="COLUMBIA.png" alt="Columbia Logo">
+                <h2>Columbia - Outdoor/Adventure</h2>
+            </div>
+            <div class="shoes">
+                <div class="shoe">
+                    <img src="columbiia 1.png" alt="Columbia Hiking Shoes">
+                    <h3>Horizon 3</h3>
+                    <p>Durable and comfortable for outdoor adventures.</p>
+                    <div class="learn-more-container">
+                        <label for="learn-more-7" class="shoe a">Learn More</label>
+                        <input type="checkbox" id="learn-more-7">
+                        <span class="description">Columbia's Horizon 3 hiking shoes are built for rugged terrain and comfort.</span>
+                    </div>
+                    <a href="https://www.next.ae/en/style/su242612/974805?gad_source=1&gclid=Cj0KCQiAy8K8BhCZARIsAKJ8sfTKgbTHiTWA8LOWuHGmhvS4qNovBm_xLwfS8BOvEU8aWqiYb0t92SYaAlj8EALw_wcB&gclsrc=aw.ds#974805" class="buy-button">Buy</a>
+                </div>
+                <div class="shoe">
+                    <img src="columbia2.png" alt="Columbia Sportswear">
+                    <h3>Columbia Sportswear</h3>
+                    <p>Stylish and functional for all-day wear.</p>
+                    <div class="learn-more-container">
+                        <label for="learn-more-8" class="shoe a">Learn More</label>
+                        <input type="checkbox" id="learn-more-8">
+                        <span class="description">Columbia's outdoor shoes are known for their durability and versatility.</span>
+                    </div>
+                    <a href="https://www.amazon.ae/Columbia-Mens-Firecamp-Boot-Black/dp/B0CLW6PDH4/ref=asc_df_B0CLW6PDH4/?tag=googleshopp09-21&linkCode=df0&hvadid=719126319744&hvpos=&hvnetw=g&hvrand=9092738310738226269&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1000013&hvtargid=pla-2337897968381&psc=1&mcid=632aee8cee133eadb222148b5e9c5d9a&gad_source=1" class="buy-button">Buy</a>
+                </div>
+                <div class="shoe">
+                    <img src="columbia3.png" alt="Columbia Snow Boots">
+                    <h3>Snow Boots</h3>
+                    <p>Perfect for cold climates and snowy adventures.</p>
+                    <div class="learn-more-container">
+                        <label for="learn-more-9" class="shoe a">Learn More</label>
+                        <input type="checkbox" id="learn-more-9">
+                        <span class="description">Stay warm and dry with Columbia’s high-performance snow boots.</span>
+                    </div>
+                    <a href="https://www.amazon.ae/Columbia-Expeditionist-Shield-Black-Graphite/dp/B0CLWL6GDS/ref=asc_df_B0CLWL6GDS/?tag=googleshopp09-21&linkCode=df0&hvadid=719218313474&hvpos=&hvnetw=g&hvrand=9092738310738226269&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1000013&hvtargid=pla-2334332782783&psc=1&mcid=fef63a619455302899ce00e513381f2b&gad_source=1" class="buy-button">Buy</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="brand">
+            <div class="brand-header">
+                <img src="Aldo.png" alt="Aldo Logo">
+                <h2>Aldo - Formal/Dress Shoes</h2>
+            </div>
+            <div class="shoes">
+                <div class="shoe">
+                    <img src="Aldo 1.png" alt="Aldo Formal Leather Oxford">
+                    <h3>Formal Leather Oxford</h3>
+                    <p>Classic elegance for formal occasions.</p>
+                    <div class="learn-more-container">
+                        <label for="learn-more-10" class="shoe a">Learn More</label>
+                        <input type="checkbox" id="learn-more-10">
+                        <span class="description">The Aldo Formal Leather Oxford offers timeless sophistication and comfort.</span>
+                    </div>
+                    <a href="https://www.aldoshoes.me/ae/en/men/delfordflex-al-20delfordflex410-blue-fw22.html" class="buy-button">Buy</a>
+                </div>
+                <div class="shoe">
+                    <img src="aldo 2.png" alt="Aldo Loafer">
+                    <h3>Loafer</h3>
+                    <p>Classic slip-on design for easy wear.</p>
+                    <div class="learn-more-container">
+                        <label for="learn-more-11" class="shoe a">Learn More</label>
+                        <input type="checkbox" id="learn-more-11">
+                        <span class="description">Aldo's loafers are perfect for both casual and formal settings.</span>
+                    </div>
+                    <a href="https://www.aldoshoes.me/ae/en/men/delfordflex-al-20delfordflex410-blue-fw22.html" class="buy-button">Buy</a>
+                </div>
+                <div class="shoe">
+                    <img src="aldo 3.png" alt="Aldo Derby Shoe">
+                    <h3>Derby Shoe</h3>
+                    <p>Refined style for the modern man.</p>
+                    <div class="learn-more-container">
+                        <label for="learn-more-12" class="shoe a">Learn More</label>
+                        <input type="checkbox" id="learn-more-12">
+                        <span class="description">The Derby shoe from Aldo adds sleek sophistication to any outfit.</span>
+                    </div>
+                    <a href="https://www.amazon.ae/ALDO-Mens-Ethen-Oxford-Black/dp/B0C35317PF/ref=asc_df_B0C35317PF/?tag=googleshopp09-21&linkCode=df0&hvadid=719110823502&hvpos=&hvnetw=g&hvrand=10195124826093676917&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1000013&hvtargid=pla-2189005672525&psc=1&mcid=9819326b5f6b3b1a80bb38b3246f9923&gad_source=1" class="buy-button">Buy</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="brand">
+            <div class="brand-header">
+                <img src="Gucci.png" alt="Gucci Logo">
+                <h2>Gucci - Luxury Designers</h2>
+            </div>
+            <div class="shoes">
+                <div class="shoe">
+                    <img src="Guccie1.png" alt="Gucci Horsebit Loafer">
+                    <h3>Horsebit Loafer</h3>
+                    <p>Iconic luxury with timeless appeal.</p>
+                    <div class="learn-more-container">
+                        <label for="learn-more-13" class="shoe a">Learn More</label>
+                        <input type="checkbox" id="learn-more-13">
+                        <span class="description">Gucci’s Horsebit Loafer is a symbol of luxury, combining elegance with comfort.</span>
+                    </div>
+                    <a href="https://www.mrporter.com/en-ae/mens/product/gucci/shoes/loafers/horsebit-1953-leather-loafers/30629810019776715?utm_source=google&utm_medium=cpc&utm_campaign=GOO%3AMRP%3AME%3AAE%3AOO%3AENG%3ASEAU%3APLA%3ASLR%3AMXO%3ANEW%3AMN%3AGUCCI%3ALV0%3ALV1%3ALV2%3AXXX%3A425%3APUSH%3A&utm_id=21926427096&utm_term=3074457345621324119&vtp00=GOOGLE&vtp01=SEAU&vtp02=171541007995&vtp03=pla-2378471738068&vtp04=g&vtp05=c&vtp06=722326959312&vtp07=pla&gad_source=1&gclid=Cj0KCQiAy8K8BhCZARIsAKJ8sfQaRbDbUzm7tmjglablkdgN9iLFr9r3Q1reQ5jB1Xi9fxmyNfYKCl4aAgwiEALw_wcB" class="buy-button">Buy</a>
+                </div>
+                <div class="shoe">
+                    <img src="Gucci 2.png" alt="Gucci Slide">
+                    <h3>Gucci Slide</h3>
+                    <p>Casual luxury for the modern man.</p>
+                    <div class="learn-more-container">
+                        <label for="learn-more-14" class="shoe a">Learn More</label>
+                        <input type="checkbox" id="learn-more-14">
+                        <span class="description">The Gucci Slide is perfect for a relaxed yet upscale look.</span>
+                    </div>
+                    <a href="https://www.mrporter.com/en-ae/mens/product/gucci/shoes/summer-shoes/pursuittreck-striped-rubber-slides/1647597341688649?utm_source=google&utm_medium=cpc&utm_campaign=GOO%3AMRP%3AME%3AAE%3AOO%3AENG%3ASEAU%3APLA%3ASLR%3AMXO%3ANEW%3AMN%3AGUCCI%3ALV0%3ALV1%3ALV2%3AXXX%3A73%3AEMPTY%3A&utm_id=20360029146&utm_term=3074457345624552186&vtp00=GOOGLE&vtp01=SEAU&vtp02=155315226138&vtp03=pla-2386205020305&vtp04=g&vtp05=c&vtp06=676115287189&vtp07=pla&gad_source=1&gclid=Cj0KCQiAy8K8BhCZARIsAKJ8sfQpPxP6_NS7XH9N8UZQn14D82YC4-66Y3qChdpLdztxFmTYZ-T5TTkaAgRVEALw_wcB" class="buy-button">Buy</a>
+                </div>
+                <div class="shoe">
+                    <img src="Guccii 3.png" alt="Gucci Sneaker">
+                    <h3>Gucci Sneaker</h3>
+                    <p>Luxury sneakers for every occasion.</p>
+                    <div class="learn-more-container">
+                        <label for="learn-more-15" class="shoe a">Learn More</label>
+                        <input type="checkbox" id="learn-more-15">
+                        <span class="description">Gucci's luxury sneakers provide a perfect combination of comfort and prestige.</span>
+                    </div>
+                    <a href="https://www.mrporter.com/en-ae/mens/product/gucci/shoes/low-top-sneakers/ace-leather-and-webbing-trimmed-monogrammed-canvas-sneakers/1647597330940969?utm_source=google&utm_medium=cpc&utm_campaign=GOO%3AMRP%3AME%3AAE%3AOO%3AENG%3ASEAU%3APLA%3ASLR%3AMXO%3ANEW%3AMN%3AGUCCI%3ALV0%3ALV1%3ALV2%3AXXX%3A425%3APUSH%3A&utm_id=21926427096&utm_term=3074457345624131558&vtp00=GOOGLE&vtp01=SEAU&vtp02=171541008235&vtp03=pla-298320445598&vtp04=g&vtp05=c&vtp06=722326959321&vtp07=pla&gad_source=1&gclid=Cj0KCQiAqL28BhCrARIsACYJvkcsW9pAvWLZqeBf1fHKrSBeBsf36c4_iKaAf-iUtZGZXiZCddSd6_UaApN7EALw_wcB" class="buy-button">Buy</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
