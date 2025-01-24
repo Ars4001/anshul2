@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Navbar and Clickable Logos</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+            animation: gradient 15s ease infinite;
+            background-size: 400% 400%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            max-width: 120px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .navbar .site-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 10px;
+            color: white;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #91c33a;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 70px;
+            margin-top: 90px; 
+            width: 100%;
+            overflow-y: auto;
+        }
+
+        .images-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center; 
+        }
+
+        .category {
+            text-align: center;
+        }
+
+        .images-container a img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .images-container a img:hover {
+            transform: scale(1.15) translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="Logo.png" alt="Logo">
+            <span class="site-name">SHOE MARKET</span>
+        </div>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="images-container">
+            
+            <div class="category">
+                <h3>Athletic Shoes</h3>
+                <a href="https://www.adidas.ae/en"><img src="ADD.png" alt="Adidas Logo" title="Adidas Services"></a>
+                <a href="https://www.nike.ae/en"><img src="NIKE.png" alt="Nike Logo" title="Nike Services"></a>
+                <a href="https://www.newbalance.co.ae/en"><img src="NEW.png" alt="New Balance Logo" title="New Balance Services"></a>
+                <a href="https://www.asics.com/"><img src="asics.png" alt="Asics Logo" title="Asics Services"></a>
+                <a href="https://about.puma.com/"><img src="Puma.png" alt="Puma Logo" title="Puma Services"></a>
+                <a href="https://www.reebok.com/"><img src="Rebook.png" alt="Reebok Logo" title="Reebok Services"></a>
+                <a href="https://www.underarmour.com/"><img src="UnderArmor.png" alt="Under Armour Logo" title="Under Armour Services"></a>
+            </div>
+
+            
+            <div class="category">
+                <h3>Casual/Streetwear</h3>
+                <a href="https://www.converse.com/"><img src="Converse.png" alt="Converse Logo" title="Converse"></a>
+                <a href="https://www.vans.com/"><img src="VANS.png" alt="VANS Logo" title="VANS Services"></a>
+                <a href="https://www.skechers.com/"><img src="Skechers.png" alt="Skechers Logo" title="Skechers Services"></a>
+                <a href="https://www.tim.com/"><img src="Timberland.png" alt="Timberland Logo" title="Timberland Services"></a>
+                <a href="https://www.crocs.com/"><img src="crocs.png" alt="Crocs Logo" title="Crocs Services"></a>
+                <a href="https://www.toms.com/"><img src="TOMS.png" alt="TOMS Logo" title="TOMS Services"></a>
+                <a href="https://www.birkenstock.com/"><img src="Birkenstocks.png" alt="Birkenstocks Logo" title="Birkenstocks Services"></a>
+            </div>
+
+            
+            <div class="category">
+                <h3>Outdoor/Adventure</h3>
+                <a href="https://www.columbia.com/"><img src="COLUMBIA.png" alt="Columbia Logo" title="Columbia"></a>
+                <a href="https://www.thenorthface.com/"><img src="North face.png" alt="North Face Logo" title="North Face"></a>
+                <a href="https://www.chacos.com/"><img src="Chaco.png" alt="Chaco Logo" title="Chaco Services"></a>
+                <a href="https://www.vibram.com/"><img src="Vibram.png" alt="Vibram Logo" title="Vibram Services"></a>
+                <a href="https://www.keenfootwear.com/"><img src="keen.png" alt="Keen Logo" title="Keen Services"></a>
+                <a href="https://www.salomon.com/"><img src="Salomon.png" alt="Salomon Logo" title="Salomon Services"></a>
+                <a href="https://www.merrell.com/"><img src="Merrell.png" alt="Merrell Logo" title="Merrell Services"></a>
+            </div>
+
+            
+            <div class="category">
+                <h3>Formal/Dress Shoes</h3>
+                <a href="https://www.aldoshoes.com/"><img src="Aldo.png" alt="Aldo Logo" title="Aldo Shoes"></a>
+                <a href="https://www.clarks.com/"><img src="Clarks.png" alt="Clarks Logo" title="Clarks Services"></a>
+                <a href="https://www.allenedmonds.com/"><img src="Allen.png" alt="Allen Edmonds Logo" title="Allen Edmonds Services"></a>
+                <a href="https://www.johnstonmurphy.com/"><img src="Johnston.png" alt="Johnston Murphy Logo" title="Johnston Murphy Services"></a>
+                <a href="https://www.barker-shoes.co.uk/"><img src="Barker.png" alt="Barker Shoes Logo" title="Barker Shoes Services"></a>
+                <a href="https://meermin.com/"><img src="Meermin.png" alt="Meermin Logo" title="Meermin Shoes"></a>
+                <a href="https://www.church-footwear.com/"><img src="Church.png" alt="Church Logo" title="Church Shoes"></a>
+            </div>
+
+            
+            <div class="category">
+                <h3>Luxury Designers</h3>
+                <a href="https://www.louisvuitton.com/"><img src="Louis .png" alt="Louis Vuitton Logo" title="Louis Vuitton"></a>
+                <a href="https://www.gucci.com/"><img src="Gucci.png" alt="Gucci Logo" title="Gucci"></a>
+                <a href="https://www.balenciaga.com/"><img src="Balenciaga.png" alt="Balenciaga Logo" title="Balenciaga"></a>
+                <a href="https://www.prada.com/"><img src="prada.png" alt="Prada Logo" title="Prada"></a>
+                <a href="https://www.alexandermcqueen.com/"><img src="alexander.png" alt="Alexander McQueen Logo" title="Alexander McQueen"></a>
+                <a href="https://www.ysl.com/"><img src="YSL.png" alt="YSL Logo" title="YSL"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
